@@ -16,5 +16,15 @@ namespace MadLibs
         {
             InitializeComponent();
         }
+
+        private void randButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void titleClear()
+        {
+
+        }
     }
 }

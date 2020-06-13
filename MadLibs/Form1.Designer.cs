@@ -70,6 +70,7 @@
             this.randButton.TabIndex = 3;
             this.randButton.Text = "Random\r\nStory";
             this.randButton.UseVisualStyleBackColor = false;
+            this.randButton.Click += new System.EventHandler(this.randButton_Click);
             // 
             // titleSmile
             // 
