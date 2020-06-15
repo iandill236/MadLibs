@@ -233,7 +233,7 @@ namespace MadLibs
             titleSetup();
         }
 
-
+        //this took a long time
         private void confirmButton_Click(object sender, EventArgs e)
         {
             if (popUp == 0)
