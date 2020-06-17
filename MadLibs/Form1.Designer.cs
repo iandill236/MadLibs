@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.titleLabel = new System.Windows.Forms.Label();
             this.subtitleLabel = new System.Windows.Forms.Label();
             this.randButton = new System.Windows.Forms.Button();
@@ -62,6 +63,7 @@
             this.word3Box = new System.Windows.Forms.TextBox();
             this.word2Box = new System.Windows.Forms.TextBox();
             this.word10Box = new System.Windows.Forms.TextBox();
+            this.storyPopUp = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -95,7 +97,7 @@
             this.randButton.Location = new System.Drawing.Point(199, 198);
             this.randButton.Name = "randButton";
             this.randButton.Size = new System.Drawing.Size(148, 59);
-            this.randButton.TabIndex = 3;
+            this.randButton.TabIndex = 1;
             this.randButton.Text = "Random\r\nStory";
             this.randButton.UseVisualStyleBackColor = false;
             this.randButton.Click += new System.EventHandler(this.randButton_Click);
@@ -119,7 +121,7 @@
             this.selectButton.Location = new System.Drawing.Point(199, 291);
             this.selectButton.Name = "selectButton";
             this.selectButton.Size = new System.Drawing.Size(148, 59);
-            this.selectButton.TabIndex = 4;
+            this.selectButton.TabIndex = 2;
             this.selectButton.Text = "Select\r\nStory";
             this.selectButton.UseVisualStyleBackColor = false;
             this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
@@ -135,7 +137,7 @@
             this.quitButton.Location = new System.Drawing.Point(199, 384);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(148, 59);
-            this.quitButton.TabIndex = 5;
+            this.quitButton.TabIndex = 3;
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = false;
             this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
@@ -151,7 +153,7 @@
             this.mainButton.Location = new System.Drawing.Point(290, 375);
             this.mainButton.Name = "mainButton";
             this.mainButton.Size = new System.Drawing.Size(153, 107);
-            this.mainButton.TabIndex = 7;
+            this.mainButton.TabIndex = 12;
             this.mainButton.Text = "Return to Main Menu";
             this.mainButton.UseVisualStyleBackColor = false;
             this.mainButton.Visible = false;
@@ -167,7 +169,7 @@
             this.blankButton.Location = new System.Drawing.Point(86, 375);
             this.blankButton.Name = "blankButton";
             this.blankButton.Size = new System.Drawing.Size(153, 107);
-            this.blankButton.TabIndex = 8;
+            this.blankButton.TabIndex = 5;
             this.blankButton.Text = "Story 5:\r\nBlankball";
             this.blankButton.UseVisualStyleBackColor = false;
             this.blankButton.Visible = false;
@@ -183,7 +185,7 @@
             this.loveButton.Location = new System.Drawing.Point(290, 149);
             this.loveButton.Name = "loveButton";
             this.loveButton.Size = new System.Drawing.Size(153, 107);
-            this.loveButton.TabIndex = 10;
+            this.loveButton.TabIndex = 2;
             this.loveButton.Text = "Story 2:\r\nLove Letter";
             this.loveButton.UseVisualStyleBackColor = false;
             this.loveButton.Visible = false;
@@ -199,7 +201,7 @@
             this.turtleButton.Location = new System.Drawing.Point(86, 149);
             this.turtleButton.Name = "turtleButton";
             this.turtleButton.Size = new System.Drawing.Size(153, 107);
-            this.turtleButton.TabIndex = 11;
+            this.turtleButton.TabIndex = 1;
             this.turtleButton.Text = "Story 1:\r\nRip-Off Ninja Turtles";
             this.turtleButton.UseVisualStyleBackColor = false;
             this.turtleButton.Visible = false;
@@ -215,7 +217,7 @@
             this.timeButton.Location = new System.Drawing.Point(86, 262);
             this.timeButton.Name = "timeButton";
             this.timeButton.Size = new System.Drawing.Size(153, 107);
-            this.timeButton.TabIndex = 12;
+            this.timeButton.TabIndex = 3;
             this.timeButton.Text = "Story 3:\r\n Once Upon a Time";
             this.timeButton.UseVisualStyleBackColor = false;
             this.timeButton.Visible = false;
@@ -231,7 +233,7 @@
             this.fortuneButton.Location = new System.Drawing.Point(290, 262);
             this.fortuneButton.Name = "fortuneButton";
             this.fortuneButton.Size = new System.Drawing.Size(153, 107);
-            this.fortuneButton.TabIndex = 13;
+            this.fortuneButton.TabIndex = 4;
             this.fortuneButton.Text = "Story 4:\r\n Fortune Cookies";
             this.fortuneButton.UseVisualStyleBackColor = false;
             this.fortuneButton.Visible = false;
@@ -260,7 +262,7 @@
             this.confirmButton.Location = new System.Drawing.Point(86, 375);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(153, 107);
-            this.confirmButton.TabIndex = 15;
+            this.confirmButton.TabIndex = 11;
             this.confirmButton.Text = "Confirm my Choices\r\n";
             this.confirmButton.UseVisualStyleBackColor = false;
             this.confirmButton.Visible = false;
@@ -283,7 +285,7 @@
             this.word1Box.Location = new System.Drawing.Point(245, 40);
             this.word1Box.Name = "word1Box";
             this.word1Box.Size = new System.Drawing.Size(232, 22);
-            this.word1Box.TabIndex = 17;
+            this.word1Box.TabIndex = 1;
             this.word1Box.Visible = false;
             // 
             // word5Label
@@ -399,7 +401,7 @@
             this.word9Box.Location = new System.Drawing.Point(245, 292);
             this.word9Box.Name = "word9Box";
             this.word9Box.Size = new System.Drawing.Size(232, 22);
-            this.word9Box.TabIndex = 28;
+            this.word9Box.TabIndex = 9;
             this.word9Box.Visible = false;
             // 
             // word8Box
@@ -407,7 +409,7 @@
             this.word8Box.Location = new System.Drawing.Point(245, 259);
             this.word8Box.Name = "word8Box";
             this.word8Box.Size = new System.Drawing.Size(232, 22);
-            this.word8Box.TabIndex = 29;
+            this.word8Box.TabIndex = 8;
             this.word8Box.Visible = false;
             // 
             // word7Box
@@ -415,7 +417,7 @@
             this.word7Box.Location = new System.Drawing.Point(245, 224);
             this.word7Box.Name = "word7Box";
             this.word7Box.Size = new System.Drawing.Size(232, 22);
-            this.word7Box.TabIndex = 30;
+            this.word7Box.TabIndex = 7;
             this.word7Box.Visible = false;
             // 
             // word6Box
@@ -423,7 +425,7 @@
             this.word6Box.Location = new System.Drawing.Point(245, 193);
             this.word6Box.Name = "word6Box";
             this.word6Box.Size = new System.Drawing.Size(232, 22);
-            this.word6Box.TabIndex = 31;
+            this.word6Box.TabIndex = 6;
             this.word6Box.Visible = false;
             // 
             // word5Box
@@ -431,7 +433,7 @@
             this.word5Box.Location = new System.Drawing.Point(245, 161);
             this.word5Box.Name = "word5Box";
             this.word5Box.Size = new System.Drawing.Size(232, 22);
-            this.word5Box.TabIndex = 32;
+            this.word5Box.TabIndex = 5;
             this.word5Box.Visible = false;
             // 
             // word4Box
@@ -439,7 +441,7 @@
             this.word4Box.Location = new System.Drawing.Point(245, 133);
             this.word4Box.Name = "word4Box";
             this.word4Box.Size = new System.Drawing.Size(232, 22);
-            this.word4Box.TabIndex = 33;
+            this.word4Box.TabIndex = 4;
             this.word4Box.Visible = false;
             // 
             // word3Box
@@ -447,7 +449,7 @@
             this.word3Box.Location = new System.Drawing.Point(245, 100);
             this.word3Box.Name = "word3Box";
             this.word3Box.Size = new System.Drawing.Size(232, 22);
-            this.word3Box.TabIndex = 34;
+            this.word3Box.TabIndex = 3;
             this.word3Box.Visible = false;
             // 
             // word2Box
@@ -455,7 +457,7 @@
             this.word2Box.Location = new System.Drawing.Point(245, 68);
             this.word2Box.Name = "word2Box";
             this.word2Box.Size = new System.Drawing.Size(232, 22);
-            this.word2Box.TabIndex = 35;
+            this.word2Box.TabIndex = 2;
             this.word2Box.Visible = false;
             // 
             // word10Box
@@ -463,8 +465,19 @@
             this.word10Box.Location = new System.Drawing.Point(245, 330);
             this.word10Box.Name = "word10Box";
             this.word10Box.Size = new System.Drawing.Size(232, 22);
-            this.word10Box.TabIndex = 37;
+            this.word10Box.TabIndex = 10;
             this.word10Box.Visible = false;
+            // 
+            // storyPopUp
+            // 
+            this.storyPopUp.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storyPopUp.Location = new System.Drawing.Point(12, 9);
+            this.storyPopUp.Name = "storyPopUp";
+            this.storyPopUp.Size = new System.Drawing.Size(507, 360);
+            this.storyPopUp.TabIndex = 38;
+            this.storyPopUp.Text = "This is a SICK and EPIC story!";
+            this.storyPopUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.storyPopUp.Visible = false;
             // 
             // Form1
             // 
@@ -472,7 +485,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(532, 503);
-            this.Controls.Add(this.warningPopUp);
             this.Controls.Add(this.word10Box);
             this.Controls.Add(this.word2Box);
             this.Controls.Add(this.word3Box);
@@ -497,7 +509,6 @@
             this.Controls.Add(this.timeButton);
             this.Controls.Add(this.turtleButton);
             this.Controls.Add(this.loveButton);
-            this.Controls.Add(this.blankButton);
             this.Controls.Add(this.mainButton);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.selectButton);
@@ -506,9 +517,13 @@
             this.Controls.Add(this.subtitleLabel);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.confirmButton);
+            this.Controls.Add(this.storyPopUp);
+            this.Controls.Add(this.warningPopUp);
+            this.Controls.Add(this.blankButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Mad Libs!";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -550,6 +565,7 @@
         private System.Windows.Forms.TextBox word3Box;
         private System.Windows.Forms.TextBox word2Box;
         private System.Windows.Forms.TextBox word10Box;
+        private System.Windows.Forms.Label storyPopUp;
     }
 }
 

@@ -12,7 +12,7 @@ namespace MadLibs
 {
     public partial class Form1 : Form
     {
-        int randomNum = 0;
+        int story = 0;
         Random randGen = new Random();
 
         string word1, word2, word3, word4, word5, word6, word7, word8, word9, word10;
@@ -109,24 +109,34 @@ namespace MadLibs
 
             word1Label.Visible = false;
             word1Box.Visible = false;
+            word1Box.Text = "";
             word2Label.Visible = false;
             word2Box.Visible = false;
+            word2Box.Text = "";
             word3Label.Visible = false;
             word3Box.Visible = false;
+            word3Box.Text = "";
             word4Label.Visible = false;
             word4Box.Visible = false;
+            word4Box.Text = "";
             word5Label.Visible = false;
             word5Box.Visible = false;
+            word5Box.Text = "";
             word6Label.Visible = false;
             word6Box.Visible = false;
+            word6Box.Text = "";
             word7Label.Visible = false;
             word7Box.Visible = false;
+            word7Box.Text = "";
             word8Label.Visible = false;
             word8Box.Visible = false;
+            word8Box.Text = "";
             word9Label.Visible = false;
             word9Box.Visible = false;
+            word9Box.Text = "";
             word10Label.Visible = false;
             word10Box.Visible = false;
+            word10Box.Text = "";
         }
         public void warningUp()
         {
@@ -175,45 +185,156 @@ namespace MadLibs
             word10Box.Visible = true;
         }
 
+        //storyPopUp.Text = "";
+        //storyPopUp.Text += "";
+        
+        public void turtleSetup()
+        {
+            story = 1;
+            word1Label.Text = "Adjective:";
+            word2Label.Text = "Adjective:";
+            word3Label.Text = "Occupation:";
+            word4Label.Text = "Animal (Plural):";
+            word5Label.Text = "Animal:";
+            word6Label.Text = "Noun:";
+            word7Label.Text = "Noun (Plural):";
+            word8Label.Text = "Adjective:";
+            word9Label.Text = "Kitchen Appliance:";
+            word10Label.Text = "Verb:";
+        }
+        public void turtleStory()
+        {
+            storyPopUp.Text = "The " + word1 + " " + word2 + " " + word3 + " " + word4 + " are 4 " + word4 + " who are led ";
+            storyPopUp.Text += "by a/an " + word5 + " in the fight against " + word6 + ". They strive to protect " + word7 + " from all ";
+            storyPopUp.Text += "violence, but their most " + word8 + " enemy is the dreaded " + word9 + ". They also love ";
+            storyPopUp.Text += "to " + word10 + " pizza!";
+        }
+
+        public void loveSetup()
+        {
+            story = 2;
+            word1Label.Text = "Famous Name:";
+            word2Label.Text = "Adjective:";
+            word3Label.Text = "Verb:";
+            word4Label.Text = "Part of The Body:";
+            word5Label.Text = "Number:";
+            word6Label.Text = "Noun:";
+            word7Label.Text = "Adverb:";
+            word8Label.Text = "Verb:";
+            word9Label.Text = "Name:";
+            word10Label.Text = "Pronoun (Plural):";
+        }
+        public void timeSetup()
+        {
+            story = 3;
+            word1Label.Text = "Noun:";
+            word2Label.Text = "Famous Name:";
+            word3Label.Text = "Negative Adjective:";
+            word4Label.Text = "Positive Adjective:";
+            word5Label.Text = "Negative Adjective:";
+            word6Label.Text = "Noun:";
+            word7Label.Text = "Noun (Plural):";
+            word8Label.Text = "Adjective:";
+            word9Label.Text = "Fighting Move:";
+            word10Label.Text = "Adjective:";
+        }
+        public void fortuneSetup()
+        {
+            story = 4;
+            word1Label.Text = "Verb:";
+            word2Label.Text = "Adverb:";
+            word3Label.Text = "Adjective:";
+            word4Label.Text = "Noun (Plural):";
+            word5Label.Text = "Noun (Plural):";
+            word6Label.Text = "Adjective:";
+            word7Label.Text = "Verb (Ending in 'ing'):";
+            word8Label.Text = "Noun (Plural):";
+            word9Label.Text = "Noun:";
+            word10Label.Text = "Weapon (Plural):";
+        }
+        public void blankSetup()
+        {
+            story = 5;
+            word1Label.Text = "Noun:";
+            word2Label.Text = "Verb (Ending in 'ing'):";
+            word3Label.Text = "Noun:";
+            word4Label.Text = "Occupation:";
+            word5Label.Text = "Number:";
+            word6Label.Text = "Location:";
+            word7Label.Text = "Verb:";
+            word8Label.Text = "Adjective:";
+            word9Label.Text = "Noun (Plural):";
+            word10Label.Text = "Noun:";
+        }
+
 
         private void randButton_Click(object sender, EventArgs e)
         {
             titleClear();
 
-            randomNum = randGen.Next(1, 6);
+            story = randGen.Next(1, 6);
 
-            // if (randomNum == 1){}
-            // if (randomNum == 2){}
-            // if (randomNum == 3){}
-            // if (randomNum == 4){}
-            // if (randomNum == 5){}
+            if (story == 1){
+                selectClear();
+                wordSetup();
+                turtleSetup();
+            }
+            else if (story == 2)
+            {
+                selectClear();
+                wordSetup();
+                loveSetup();
+            }
+            else if (story == 3)
+            {
+                selectClear();
+                wordSetup();
+                timeSetup();
+            }
+            else if (story == 4)
+            {
+                selectClear();
+                wordSetup();
+                fortuneSetup();
+            }
+            else if (story == 5)
+            {
+                selectClear();
+                wordSetup();
+                blankSetup();
+            }
         }
 
-        
+
         private void turtleButton_Click_1(object sender, EventArgs e)
         {
             selectClear();
             wordSetup();
+            turtleSetup();
         }
         private void loveButton_Click(object sender, EventArgs e)
         {
             selectClear();
             wordSetup();
+            loveSetup();
         }
         private void timeButton_Click(object sender, EventArgs e)
         {
             selectClear();
             wordSetup();
+            timeSetup();
         }
         private void fortuneButton_Click(object sender, EventArgs e)
         {
             selectClear();
             wordSetup();
+            fortuneSetup();
         }
         private void blankButton_Click_1(object sender, EventArgs e)
         {
             selectClear();
             wordSetup();
+            blankSetup();
         }
 
 
@@ -228,24 +349,26 @@ namespace MadLibs
         }
         private void mainButton_Click(object sender, EventArgs e)
         {
-            wordClear();
             selectClear();
             titleSetup();
+            warningDown();
+            wordClear();
+            storyPopUp.Visible = false;
         }
 
-        //this took a long time
+
         private void confirmButton_Click(object sender, EventArgs e)
         {
             if (popUp == 0)
             {
-                if (word1Box.Text==null||word1Box.Text == ""|| word2Box.Text == null || word2Box.Text == "" || word3Box.Text == null || word3Box.Text == "" || word4Box.Text == null || word4Box.Text == "" || word5Box.Text == null || word5Box.Text == "" || word6Box.Text == null || word6Box.Text == "" || word7Box.Text == null || word7Box.Text == "" || word8Box.Text == null || word8Box.Text == "" || word9Box.Text == null || word9Box.Text == "" || word10Box.Text == null || word10Box.Text == "")
+                if (word1Box.Text == null || word1Box.Text == "" || word2Box.Text == null || word2Box.Text == "" || word3Box.Text == null || word3Box.Text == "" || word4Box.Text == null || word4Box.Text == "" || word5Box.Text == null || word5Box.Text == "" || word6Box.Text == null || word6Box.Text == "" || word7Box.Text == null || word7Box.Text == "" || word8Box.Text == null || word8Box.Text == "" || word9Box.Text == null || word9Box.Text == "" || word10Box.Text == null || word10Box.Text == "")
                 {
                     warningUp();
                     popUp = 1;
                     warningPopUp.Visible = true;
                     confirmButton.Text = "Review my Choices";
                     mainButton.Visible = false;
-                    confirmButton.Location = new Point(confirmButton.Location.X + 77, confirmButton.Location.Y);                    
+                    confirmButton.Location = new Point(confirmButton.Location.X + 77, confirmButton.Location.Y);
                 }
                 else
                 {
@@ -259,9 +382,27 @@ namespace MadLibs
                     word8 = Convert.ToString(word8Box.Text);
                     word9 = Convert.ToString(word9Box.Text);
                     word10 = Convert.ToString(word10Box.Text);
+
+                    warningUp();
+                    storyPopUp.Visible = true;
+                    popUp = 2;
+                    confirmButton.Text = "Review my Choices";
+
+                    if (story == 1){
+                        turtleStory();
+                    }else if (story == 2){
+
+                    }else if (story == 3){
+
+                    }else if (story == 4){
+
+                    }else if (story == 5){
+
+                    }
+
                 }
             }
-            else if(popUp == 1)
+            else if (popUp == 1)
             {
                 warningDown();
                 popUp = 0;
@@ -269,6 +410,13 @@ namespace MadLibs
                 confirmButton.Text = "Confirm my Choices";
                 mainButton.Visible = true;
                 confirmButton.Location = new Point(confirmButton.Location.X - 77, confirmButton.Location.Y);
+            }
+            else if (popUp == 2)
+            {
+                warningDown();
+                popUp = 0;
+                confirmButton.Text = "Confirm my Choices";
+                storyPopUp.Visible = false;
             }
         }
     }
