@@ -185,8 +185,6 @@ namespace MadLibs
             word10Box.Visible = true;
         }
 
-        //storyPopUp.Text = "";
-        //storyPopUp.Text += "";
         
         public void turtleSetup()
         {
@@ -224,6 +222,16 @@ namespace MadLibs
             word9Label.Text = "Name:";
             word10Label.Text = "Pronoun (Plural):";
         }
+        public void loveStory()
+        {
+            storyPopUp.Text = "Dear " + word1 + ",";
+            storyPopUp.Text += "\n\nYou are extremely " + word2 + " and I " + word3 + " you! I want to kiss your " + word4 + " " + word5;
+            storyPopUp.Text += " times. You make my " + word6 + " burn with desire. When I first saw you, I " + word7 + " stared at you and ";
+            storyPopUp.Text += "fell in love. Will you " + word8 + " out with me?";
+            storyPopUp.Text += "\n\nYours forever, " + word9;
+            storyPopUp.Text += "\n\nP.S.: Don't let your parents keep our love away, " + word10 + " are just jealous.";
+        }
+
         public void timeSetup()
         {
             story = 3;
@@ -238,6 +246,16 @@ namespace MadLibs
             word9Label.Text = "Fighting Move:";
             word10Label.Text = "Adjective:";
         }
+        public void timeStory()
+        {
+            storyPopUp.Text = "Once upon a time, there was a " + word1 + " called " + word2 + ". Their parents would describe ";
+            storyPopUp.Text += "them as " + word3 + ", but all of their friends thought they were really " + word4 + ". ";
+            storyPopUp.Text += "One day, a " + word5 + " " + word6 + " came to " + word2 + " and said, 'I hate ";
+            storyPopUp.Text += word7 + "!' This made " + word2 + " really " + word8 + ", since they really liked " + word7;
+            storyPopUp.Text += ". So " + word2 + " used their signature move, 'The " + word9 + "' on the " + word6;
+            storyPopUp.Text += ". This made them so " + word10 + " that they screamed, 'I love " + word7 + "!', making " + word2 + " the hero of the day!";
+        }
+
         public void fortuneSetup()
         {
             story = 4;
@@ -252,7 +270,19 @@ namespace MadLibs
             word9Label.Text = "Noun:";
             word10Label.Text = "Weapon (Plural):";
         }
-        public void blankSetup()
+        public void fortuneStory()
+        {
+            storyPopUp.Text = "~~" + word1 + " " + word2 + " without being " + word3 + ".~~";
+            storyPopUp.Text += "\n\n~~The universe does not have " + word4 + " -- it has~~";
+            storyPopUp.Text += "\n~~" + word5 + ", and " + word5 + " can be " + word6 + ".~~";
+            storyPopUp.Text += "\n\n~~The " + word7 + " of random " + word8 + "~~";
+            storyPopUp.Text += "\n~~is too important to be left to chance.~~";
+            storyPopUp.Text += "\n\n~~You can build a " + word9 + " with " + word10 + "~~";
+            storyPopUp.Text += "\n~~but you can't sit on it for long.~~";
+            storyPopUp.Text += "\n\nYour Lucky Numbers: 1, 2, 28, 37, 38, 46";
+        }
+
+        public void BlankSetup()
         {
             story = 5;
             word1Label.Text = "Noun:";
@@ -265,6 +295,14 @@ namespace MadLibs
             word8Label.Text = "Adjective:";
             word9Label.Text = "Noun (Plural):";
             word10Label.Text = "Noun:";
+        }
+        public void BlankStory()
+        {
+            storyPopUp.Text = word1 + "ball is a very exciting sport. Whether you are " + word2 + " the ball with a ";
+            storyPopUp.Text += word3 + ", or you are the " + word4 + " and striking out " + word5 + " batters in a row, you'll be having ";
+            storyPopUp.Text += "fun. You can also be the catcher, standing at " + word6 + " plate, ready to " + word7 + " the next person ";
+            storyPopUp.Text += "as they try to make it to " + word6 + ". But the best part of it is when someone hits a ";
+            storyPopUp.Text += word8 + " slam when all the " + word9 + " are loaded during the last " + word10 + " to win the game.";
         }
 
 
@@ -301,7 +339,7 @@ namespace MadLibs
             {
                 selectClear();
                 wordSetup();
-                blankSetup();
+                BlankSetup();
             }
         }
 
@@ -334,7 +372,7 @@ namespace MadLibs
         {
             selectClear();
             wordSetup();
-            blankSetup();
+            BlankSetup();
         }
 
 
@@ -391,13 +429,13 @@ namespace MadLibs
                     if (story == 1){
                         turtleStory();
                     }else if (story == 2){
-
+                        loveStory();
                     }else if (story == 3){
-
+                        timeStory();
                     }else if (story == 4){
-
+                        fortuneStory();
                     }else if (story == 5){
-
+                        BlankStory();
                     }
 
                 }
